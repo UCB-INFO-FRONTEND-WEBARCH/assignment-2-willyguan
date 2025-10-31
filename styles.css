@@ -1,0 +1,222 @@
+/* This is your CSS files */
+/* body {
+    color: black
+} */
+/* ========== RESET AND BASE STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+}
+
+/* Container for whole page */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+/* Header section - red bar at top */
+.main-header {
+    background-color: #dc4c3e;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+}
+
+.quick-find {
+    padding: 8px 12px 8px 35px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Roboto';
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white; 
+}
+.quick-find::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.task-counter {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Left sidebar navigation */
+.sidebar {
+    width: 300px;
+    background-color: #fefbf2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-right: 1px solid lightgray;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-item {
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-item-content {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+}
+
+.nav-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-text {
+    font-size: 14px;
+    color: black;
+}
+
+.nav-count {
+    font-size: 12px;
+    color: #7e7d79;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+}
+
+.main-header-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid lightgray;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+/* Circular checkboxes */
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.task-checkbox:checked {
+    border-color: #dc4c3e;
+    background-color: #dc4c3e;
+}
+
+.task-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-left: 4px;
+    margin-top: 2px;
+}
+
+.task-text {
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Responsive - hide sidebar on small screens */
+@media (max-width: 480px) {
+    .sidebar {
+        display: none;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+    
+    .quick-find {
+        width: 180px;
+    }
+}
