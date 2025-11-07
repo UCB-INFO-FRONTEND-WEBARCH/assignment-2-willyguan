@@ -1,5 +1,6 @@
 import menuIcon from '../assets/menu_icon.png';
 import searchIcon from '../assets/search_icon.png';
+import checkIcon from '../assets/check_icon.png'
 
 function Header({ totalTasks, completedTasks }) {
   return (
@@ -14,6 +15,7 @@ function Header({ totalTasks, completedTasks }) {
         </div>
       </div>
       <div className="header-right">
+        <img src={checkIcon} alt="Check" className="check-icon" />
         <span className="task-counter">{completedTasks}/{totalTasks}</span>
       </div>
     </header>

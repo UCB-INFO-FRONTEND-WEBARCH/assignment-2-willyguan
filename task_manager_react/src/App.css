@@ -85,6 +85,12 @@ body {
 .header-right {
     display: flex;
     align-items: center;
+    gap: 8px;  
+}
+
+.check-icon {
+    width: 16px;
+    height: 16px;
 }
 
 .task-counter {
