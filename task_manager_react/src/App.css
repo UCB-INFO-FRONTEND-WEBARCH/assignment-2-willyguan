@@ -212,6 +212,12 @@ body {
     cursor: pointer;
 }
 
+.task-text.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: #999;
+}
+
 /* Responsive - hide sidebar on small screens */
 @media (max-width: 480px) {
     .sidebar {
